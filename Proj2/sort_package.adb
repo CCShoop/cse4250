@@ -1,0 +1,32 @@
+-- Author: Cael Shoop, cshoop2018@my.fit.edu
+-- Course: CSE 4250, Fall 2020
+-- Project: Proj2, Simply Sort 
+-- Language implementation: GNAT Community 2020 (20200429-93)
+-- GNATMAKE 10.2.0
+
+-- i = 0
+-- while i<length(A)-1
+--    x = A[i]
+--    y = A[i+1]
+--    if x<y then        ensure that x in not smaller than y
+--      swap x and y
+--    j = i - 1          find the insertion point 'j' for x
+--    while j>=0 and A[j]>x
+--       A[j+2] = A[j]
+--       j = j-1
+
+--    A[j+2] = x          store x at its insertion point
+--                        A[j+1] is available; y needs to be inserted
+--    while j>=0 and A[j]>y
+--       A[j+1] = A[j]
+--       j = j-1
+--    A[j+1] = y
+--    i = i+2
+
+-- if i=length(A)-1
+--    y = A[i]
+--    j = i-1
+--    while j>=0 and A[j]>y
+--      A[j+1] = A[j]
+--      j = j-1
+--    A[j+1] = y
